@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "whisper-live-transcription"
+version = "0.1.0"
+description = ""
+authors = ["Konstantin Meshcheryakov <kmeshcheryakov@klika-tech.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+transformers = "^4.40.2"
+pyside6 = "^6.7.0"
+ffmpeg-python = "^0.2.0"
+optimum = "^1.19.1"
+accelerate = "^0.30.0"
+faster-whisper = "^1.0.2"
+pulsectl = "^24.4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.24.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# Add executable file
+[tool.poetry.scripts]
+whisper-live-transcription = "whisper_live_transcription.ui:main"
